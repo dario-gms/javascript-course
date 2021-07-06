@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <title>Tela de Agendamento</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dário Gomes">
+    <meta name="description" content="tela 2 site agendamento">
+    <meta name="keywords" content="agendamento, formulário, preencher informações">
+    </head>
+    <body>
+        <h1 style="font-size: 100px; font-family: Arial, Helvetica, sans-serif; text-align: center;">Informações para agendamento</h1>
+        <br><br><br><br>
+
+        <div style="font-size: 70px; font-family: Arial, Helvetica, sans-serif; margin-left: 30px;">
+            <form action="/pagina-processa-dados-do-form" method="post">
+                <div>
+                    <label for="name">Nome:</label>
+                    <input style= "margin: 10px auto; width: 500px; height: 10px; padding: 1em; border: 1px solid #CCC; border-radius: 1em; font-size: 70px;" type="text" id="name" />
+                </div>
+                <div>
+                    <label for="number">Contato:</label>
+                    <input style= "margin: 10px auto; width: 500px; height: 10px; padding: 1em; border: 1px solid #CCC; border-radius: 1em; font-size: 70px;" type="number" id="contato"/>
+                </div>
+                <div>
+                    <label for="date">Data:</label>
+                    <input style= "margin: 10px auto; width: 500px; height: 10px; padding: 1em; border: 1px solid #CCC; border-radius: 1em; font-size: 70px;" type="date" id="data"/>
+                </div> 
+                <div>
+                    <label for="time">horário:</label>
+                    <input style= "margin: 10px auto; width: 500px; height: 10px; padding: 1em; border: 1px solid #CCC; border-radius: 1em; font-size: 70px;" type="time" id="hora"/>
+                </div>                   
+                <div class="button">
+                    <button style="font-size: 70px; margin-left: 30px; margin-top: 100px;" type="submit"><a href="confirmacao.html">Confirmar Agendamento</a></button>
+                </div>
+                <button style="font-size: 70px; margin-left: 300px; margin-top: 100px;" type="submit"><a href="index.html">Voltar</a></button>
+            </form>       
+        </div>
+    </body>
+
+</html>

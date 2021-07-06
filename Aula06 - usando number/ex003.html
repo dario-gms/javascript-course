@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dário">
+    <title>Aula de JS</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um numero: ')) // utilizar o Number.parseInt converte o que foi digitado em um numero inteiro
+       var n2 = Number.parseFloat(window.prompt('Digite outro numero: ')) // utilizar o NUmber.parseFloat converte o que foi digitado em um numero inteiro ou real
+       /*Utilizar somente o Number força o javascript a identificar se é inteiro ou real, ex: var n3 = Number(window.prompt('digite qualquer numero'))  */
+       var s = n1 + n2
+       window.alert('A soma dos valores digitados é ' + String(s)) // comando String() converte resultado em uma string.
+    </script>
+</body>
+</html>
