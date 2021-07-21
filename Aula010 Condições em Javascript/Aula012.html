@@ -21,9 +21,11 @@
             var res = window.document.querySelector('div#res')
             var pais = txtpais.value
             res.innerHTML = `<p>Seu país de origem é <strong>${pais}.</strong></p>`
-            if (pais == 'Brasil','Brazil') {
+            if (pais == 'Brasil') {
                 res.innerHTML += `<p>Você é <strong>brasileiro!</strong></p>`
-            } else { res.innerHTML += '<p>Você é <strong>estrangeiro!</strong></p>' }
+            } else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro!</strong></p>`
+            }
             res.innerHTML += '<p>Seja bem vindo ao Rio de Janeiro!</p>'
         }
     </script>
