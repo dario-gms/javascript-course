@@ -7,7 +7,7 @@ function carregar() {
     msg.innerHTML = `Agora são <strong>${hora}:${minuto}</strong>.`
     if (hora >= 0 && hora < 12) {
         img.src = '_imagens/manhã.png'
-        document.body.style.background = '#6b9114'
+        document.body.style.background = '#1fa64c'
         msg.innerHTML += '<p>Tenha um bom dia</p>'
     } else if (hora >= 12 && hora < 18) {
         img.src = '_imagens/tarde.png'
@@ -29,7 +29,7 @@ function encerrar() {
         fim = "Expediente encerrado com sucesso!\nBom descanso!";
     }
     else {
-        alert("ação cancelada!")
+        alert("Ação cancelada!")
         fim = "Tenha um bom trabalho.";
     }
     document.getElementById("final").innerHTML = fim;
