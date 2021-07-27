@@ -6,15 +6,15 @@ function carregar() {
     var minuto = data.getMinutes()
     msg.innerHTML = `Agora são <strong>${hora}:${minuto}</strong>.`
     if (hora >= 0 && hora < 12) {
-        img.src = 'manhã.png'
+        img.src = '_imagens/manhã.png'
         document.body.style.background = '#6b9114'
         msg.innerHTML += '<p>Tenha um bom dia</p>'
-    } else if (hora >= 12 && hora <= 18) {
-        img.src = 'tarde.png'
+    } else if (hora >= 12 && hora < 18) {
+        img.src = '_imagens/tarde.png'
         document.body.style.background = '#6693c4'
         msg.innerHTML += '<p>Tenha uma boa tarde</p>'
     } else {
-        img.src = 'noite.png'
+        img.src = '_imagens/noite.png'
         document.body.style.background = '#0e151d'
         msg.innerHTML += '<p>Tenha uma boa noite</p>'
     }
@@ -29,7 +29,8 @@ function encerrar() {
         fim = "Expediente encerrado com sucesso!\nBom descanso!";
     }
     else {
-        fim = "Ação cancelada com sucesso!";
+        alert("ação cancelada!")
+        fim = "Tenha um bom trabalho.";
     }
     document.getElementById("final").innerHTML = fim;
 }
