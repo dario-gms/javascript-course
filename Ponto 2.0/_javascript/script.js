@@ -24,13 +24,13 @@ function marcar() {
     var hora = data.getHours()
     var minuto = data.getMinutes()
     var ini;
-    var s = confirm("Iniciar expediente?");
-    if (s == true) {
-        ini = `Expediente iniciado às ${hora}:${minuto}. \nBom Trabalho!`;
-    }
-    else {
-        alert("Ação cancelada!")
-        ini = "Expediente não iniciado";
+    user = window.prompt("Digite seu usuário");
+    var acess = window.prompt("Digite seu código de acesso")
+    if (user == 'Dario' && acess == 994936694) {
+        ini = `Expediente iniciado às <strong>${hora}:${minuto}</strong>. \nTenha um bom trabalho <strong>${user}</strong>!`;
+    } else if (user || acess != true) {
+        alert("Insira o usuário e código de acesso corretamente.")
+        ini = "Expediente não iniciado.";
     }
     document.getElementById("inicio").innerHTML = ini;
 }
@@ -42,7 +42,7 @@ function encerrar() {
     var fim;
     var r = confirm("Deseja encerrar o expediente?");
     if (r == true) {
-        fim = `Expediente encerrado às ${hora}:${minuto}. \nBom descanso!`;
+        fim = `Expediente encerrado às <strong>${hora}:${minuto}</strong>. \nBom descanso <strong>${user}</strong>!`;
     }
     else {
         alert("Ação cancelada!")
