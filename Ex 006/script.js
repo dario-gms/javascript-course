@@ -26,7 +26,7 @@ function adicionar() {
         item.text = `Valor ${num.value} adicionado.`
         lista.appendChild(item)
     } else {
-        window.alert('Valor inválido ou já encontrado na lista.')
+        window.alert(`Valor ${num.value} inválido ou já se encontra na lista.`)
     }
     num.value = ''
     num.focus()
@@ -38,11 +38,11 @@ function finalizar() {
     } else {
         let tot = valores.length
         let maior = valores[0]
-        let menor = valore[0]
+        let menor = valores[0]
         for (let pos in valores) {
             if (valores[pos] > maior)
                 maior = valores[pos]
-            if (valore[pos] < menor)
+            if (valores[pos] < menor)
                 menor = valores[pos]
         }
         res.innerHTML = ''
