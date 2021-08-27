@@ -1,14 +1,36 @@
-let minhaImagem = document.querySelector('img');
+let myImage = document.querySelector('img');
 
-minhaImagem.onclick = function() {
-    let meuSrc = minhaImagem.getAttribute('src');
-    if(meuSrc === 'imagens/firefox-icon.png') {
-      minhaImagem.setAttribute ('src','imagens/site123.png');
-    } else {
-      minhaImagem.setAttribute ('src','imagens/weebly.png');
-    }
+myImage.onclick = function() {
+  let mySrc = myImage.getAttribute('src');
+  if(mySrc === 'images/firefox-icon.png') {
+    myImage.setAttribute ('src','images/firefox2.png');
+  } else {
+    myImage.setAttribute ('src','images/firefox-icon.png');
+  }
 }
 
-document.querySelector('h1').onclick = function () {
-    alert('Ai! Pare de me cutucar!')
+// Personalized welcome message code
+
+let myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
+
+function setUserName() {
+  let myName = prompt('Please enter your name.');
+  if(!myName) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  }
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+}
+
+myButton.onclick = function() {
+  setUserName();
 }
