@@ -1,41 +1,45 @@
-function addTable() {
-    var myTableDiv = document.getElementById("minhaTabela");
 
-    var table = document.createElement('TABLE');
-    table.border = '3';
-
-    var tableBody = document.createElement('TBODY');
-    table.appendChild(tableBody);
-
-    for (var mes = 0; mes < 3; mes++) {
-        var tr = document.createElement('TR');
-        tableBody.appendChild(tr);
-
-        for (var dia = 0; dia < 2; dia++) {
-            var td = document.createElement('TD');
-            td.width = '75';
-            td.appendChild(document.createTextNode(dia + "/09/2021"));
-            tr.appendChild(td);
-        }
-        for (var entrada = 0; entrada < 1; entrada++) {
-            var td = document.createElement('TD');
-            td.width = '75';
-            td.appendChild(document.createTextNode("Entrada"));
-            tr.appendChild(td);
-        }
-        for (var saida = 0; saida < 1; saida++) {
-            var td = document.createElement('TD');
-            td.width = '75';
-            td.appendChild(document.createTextNode("Saída"));
-            tr.appendChild(td);
-        }
-        for (var status = 0; status <1; status++) {
-            var td = document.createElement('TD');
-            td.width = '75';
-            td.appendChild(document.createTextNode("status"));
-            tr.appendChild(td)
-        }
+let dia = new Date();
+var records = [
+    {
+        in: dia,
+        out: dia,
+    },
+    {
+        in: dia,
+        out: dia,
+    },
+    {
+        in: dia,
+        out: dia,
+    },
+    {
+        in: dia,
+        out: dia,
+    },
+    {
+        in: dia,
+        out: dia,
     }
-    myTableDiv.appendChild(table);
+];
+
+function addTable() {
+    let tableBody = document.getElementById("minhaTabela"); //renomear para tbody
+
+    for (record in records) {
+        let tr = document.createElement('tr');
+        for (item in record) {
+            var tdEntrada = document.createElement('td');
+            let entrada = records[record]["in"];
+            tdEntrada.appendChild(document.createTextNode(entrada));
+            tr.appendChild(tdEntrada);
+
+            var tdSaida = document.createElement('td');
+            let saida = records[record]["out"];
+            tdSaida.appendChild(document.createTextNode(saida));
+            tr.appendChild(tdSaida);
+        }
+        tableBody.appendChild(tr);
+    }
 }
 addTable();
