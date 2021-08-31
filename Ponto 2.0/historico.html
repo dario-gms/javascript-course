@@ -10,141 +10,32 @@
     <link rel="stylesheet" href="_css/style.css">
 </head>
 
-<body onload="carregar()">
+<body>
+
     <header>
         <h1>Histórico</h1>
-        <h2>Área ainda não funcional. Tabela meramente ilustrativa.</h2>
+        <h2>Setembro 2021.</h2>
     </header>
-    <div>
-    </div>
     <section>
         <div>
             <table>
-                <tr>
-                    <td> Data </td>
-                    <td> Entrada </td>
-                    <td> Saída</td>
-                    <td> Status </td>
-                </tr>
-                <tr>
-                    <td>01/06</td>
-                    <td>08:00</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr">
-                    <td>02/06</td>
-                    <td>08:10</td>
-                    <td>17:00</td>
-                    <td>Folga</td>
-                </tr>
-                <tr>
-                    <td>03/06</td>
-                    <td>08:00</td>
-                    <td>17:00</td>
-                    <td>Folga</td>
-                </tr>
-                <tr>
-                    <td>04/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>05/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>06/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>07/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>08/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>09/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>10/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>11/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>12/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>13/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>14/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>15/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>16/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>17/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>18/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
-                <tr>
-                    <td>19/06</td>
-                    <td>07:56</td>
-                    <td>17:00</td>
-                    <td>ok</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <td id="principal">Data</td>
+                        <td id="principal">Entrada</td>
+                        <td id="principal">Saída</td>
+                        <td id="principal">Status</td>
+                    </tr>
+                </thead>
+                <tbody id="minhaTabela">
+                </tbody>
             </table>
         </div>
+
     </section>
 </body>
 <footer>&copy; Desenvolvido por Dário Gomes </footer>
-<script src="_javascript/script.js"></script>
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+<script src="_javascript/historico.js"></script>
 
 </html>
