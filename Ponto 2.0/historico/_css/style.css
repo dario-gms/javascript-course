@@ -34,10 +34,17 @@ tr {
     
 }
 
-td#principal {
-    border-style: groove;
-    padding: 11px;
-    
+#principal {
+    border-style: solid;
+    padding: 25px;
+    font-style: oblique;
+    font-weight: bolder;       
+}
+
+#minhaTabela {
+    font-size: 20px;
+    padding: auto;
+    font-style: italic;
 }
 
 
