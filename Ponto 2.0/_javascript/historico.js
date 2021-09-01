@@ -1,44 +1,56 @@
 var records = [
     {
         local: moment.locale('pt-br'),
-        date: moment().format('D/MM/YYYY'),
+        date: moment().format('DD/MM/YYYY'),
         entrance: moment().format('LTS'),
         exit: moment().format('LTS'),
         status: moment().format('dddd')
+    },
+    {
+        local: moment.locale('pt-br'),
+        date: moment().format('DD/MM/YYYY'),
+        entrance: moment().format('LTS'),
+        exit: moment().format('LTS'),
+        status: moment().format('dddd')
+    },
+    {
+        local: moment.locale('pt-br'),
+        date: moment().format('DD/MM/YYYY'),
+        entrance: moment().format('LTS'),
+        exit: moment().format('LTS'),
+        status: moment().format('ddd')
     }
+    
 ];
 
 function addTable() {
     let tBody = document.getElementById("minhaTabela");
-
     for (record in records) {
-        let tr = document.createElement('tr');
-        for (item in record) {
-            var tdData = document.createElement('td');
-            let data = records[record]["date"];
-            tdData.appendChild(document.createTextNode(data));
-            tdData.style.border = '2px solid black';
-            tr.appendChild(tdData);
-
-            var tdEntrada = document.createElement('td');
-            let entrada = records[record]["entrance"];
-            tdEntrada.appendChild(document.createTextNode(entrada));
-            tdEntrada.style.border = '2px solid black';
-            tr.appendChild(tdEntrada);
-
-            var tdSaida = document.createElement('td');
-            let saida = records[record]["exit"];
-            tdSaida.appendChild(document.createTextNode(saida));
-            tdSaida.style.border = '2px solid black';
-            tr.appendChild(tdSaida);
-
-            var tdStatus = document.createElement('td');
-            let status = records[record]["status"];
-            tdStatus.appendChild(document.createTextNode(status));
-            tdStatus.style.border = '2px solid black';
-            tr.appendChild(tdStatus);
-        }
+        let tr = addLine(records[record]);
         tBody.appendChild(tr);
     }
 }
 addTable();
+
+function addLine(record) {
+    let tr = document.createElement('tr');
+    let tdDate = addCell(record, "date");
+    tr.appendChild(tdDate);
+    let tdEntrada = addCell(record, "entrance");
+    tr.appendChild(tdEntrada);
+    let tdSaida = addCell(record, "exit");
+    tr.appendChild(tdSaida);
+    let tdStatus = addCell(record, "status");
+    tr.appendChild(tdStatus);
+    return tr;
+}
+
+function addCell(record, nameItem) {
+    let border = '2px solid black';
+    let td = document.createElement('td');
+    let date = record[nameItem];
+    td.appendChild(document.createTextNode(date));
+    td.style.border = border;
+    return td;
+}
+
