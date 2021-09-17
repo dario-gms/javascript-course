@@ -1,0 +1,20 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dario-gms/javascript-course.git"
+  },
+  "author": "D. Gomes",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dario-gms/javascript-course/issues"
+  },
+  "homepage": "https://github.com/dario-gms/javascript-course#readme"
+}
